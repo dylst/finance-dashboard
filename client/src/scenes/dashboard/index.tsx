@@ -1,6 +1,7 @@
 import { Box, useMediaQuery } from '@mui/material';
-
-type Props = {};
+import Row1 from './Row1';
+import Row2 from './Row2';
+import Row3 from './Row3';
 
 const gridTemplateLargeScreens = `
     "a b c"
@@ -49,9 +50,8 @@ const gridTemplateSmallScreens = `
 
 `;
 
-const Dashboard = (props: Props) => {
+const Dashboard = () => {
   const isAboveMediumScreens = useMediaQuery('(min-width: 1200px)');
-
   return (
     <Box
       width='100%'
@@ -72,16 +72,9 @@ const Dashboard = (props: Props) => {
             }
       }
     >
-      <Box bgcolor='#abb8c3' gridArea='a'></Box>
-      <Box bgcolor='#abb8c3' gridArea='b'></Box>
-      <Box bgcolor='#abb8c3' gridArea='c'></Box>
-      <Box bgcolor='#abb8c3' gridArea='d'></Box>
-      <Box bgcolor='#abb8c3' gridArea='e'></Box>
-      <Box bgcolor='#abb8c3' gridArea='f'></Box>
-      <Box bgcolor='#abb8c3' gridArea='g'></Box>
-      <Box bgcolor='#abb8c3' gridArea='h'></Box>
-      <Box bgcolor='#abb8c3' gridArea='i'></Box>
-      <Box bgcolor='#abb8c3' gridArea='j'></Box>
+      <Row1 />
+      <Row2 />
+      <Row3 />
     </Box>
   );
 };
